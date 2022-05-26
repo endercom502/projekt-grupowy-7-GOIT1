@@ -1,0 +1,21 @@
+/*
+ * Główny plik dla stylów.
+ * Wszystkie partials podłączamy tutaj.
+ */
+
+@import './utils/variables';
+
+@import './base/common';
+@import './base/section';
+@import './base/container';
+
+@import './header';
+@import './header-menu';
+@import './header-modal';
+@import './products';
+@import './about';
+@import './advantages';
+@import './gallery';
+@import './opinions';
+@import './location';
+@import './footer';

@@ -1,0 +1,332 @@
+   #products-anchor {
+         padding-bottom: 15px;
+         display: flex;
+         font-size: 18px;
+         font-family: var(--txt-font);
+         line-height: 1.167;
+         justify-content: center;
+         text-transform: uppercase;
+         color: var(--light-pink);
+     }
+
+     .products-section {
+         padding-top: 121px;
+         padding-bottom: 98px;
+         display: flex;
+
+         &__heading {
+             margin: 0;
+             padding-bottom: 144px;
+             display: flex;
+             font-size: 36px;
+             font-family: var(--txt-font);
+             line-height: 1.147;
+             letter-spacing: 0.04em;
+             justify-content: center;
+             text-transform: uppercase;
+             color: var(--dark-pink);
+         }
+     }
+
+     .grid {
+         margin: 0 auto;
+         padding: 0 20px 0 20px;
+         display: flex;
+         flex-direction: column;
+         list-style: none;
+
+         &__card {
+             display: flex;
+
+             &:not(:last-child) {
+                 margin-bottom: 130px;
+             }
+         }
+
+         &__item {
+             position: relative;
+             display: flex;
+             flex-direction: column;     
+             width: 280px;
+             height: 485px;
+             border-radius: 24px;
+
+             &--icecream {
+                 background: var(--icecream-bg);
+
+                 &::before {
+                     content: '';
+                     position: absolute;
+                     top: -115px;
+                     left: 16px;
+                     display: block;
+                     width: 249px;
+                     height: 252px;
+                     background-image: url(/images/product-1-249x252@1x.webp);
+                     background-position: center;
+                     background-repeat: no-repeat;
+                 }
+             }
+
+             &--icecoffee {
+                 background: var(--icecoffee-bg);
+
+                 &::before {
+                     content: '';
+                     position: absolute;
+                     top: -115px;
+                     left: 16px;
+                     display: block;
+                     width: 249px;
+                     height: 252px;
+                     background-image: url(/images/product-2-249x252@2x.webp);
+                     background-position: center;
+                     background-repeat: no-repeat;
+                 }
+             }
+
+             &--milkshakes {
+                 background: var(--milkshakes-bg);
+
+                 &::before {
+                     content: '';
+                     position: absolute;
+                     top: -115px;
+                     left: 16px;
+                     display: block;
+                     width: 249px;
+                     height: 252px;
+                     background-image: url(/images/product-3-249x252.webp);
+                     background-position: center;
+                     background-repeat: no-repeat;
+                 }
+             }
+         }
+
+         &__heading {
+             margin-top: 161px;
+             margin-bottom: 0;
+             font-size: 20px;
+             font-family: var(--txt-font);
+             line-height: 1.15;
+             letter-spacing: 0.04em;
+             text-align: center;
+             text-transform: uppercase;
+             color: var(--txt-color);
+
+             &::after {
+                 content: '';
+                 display: block;
+                 width: 25px;
+                 margin-top: 50px;
+                 margin-left: auto;
+                 margin-right: auto;
+                 border-bottom: 6px dotted var(--txt-color)
+             }
+         }
+
+         &__text {
+             margin: 0;
+             padding: 30px 40px;
+             max-height: 115px;
+             font-size: 14px;
+             font-weight: 700;
+             font-family: var(--contact-font);
+             letter-spacing: 0.04em;
+             line-height: 1.52;
+             text-align: center;
+             overflow: hidden;
+             color: var(--txt-color);
+         }
+            
+         &__btn {
+            margin: 25px auto 5px auto;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(/images/arrow-right.png);
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+                &:hover,
+                &:focus {
+                    border: 5px solid var(--dark-pink);
+                }
+            }
+
+        .grid__card.is-active .grid__text {
+            max-height: none;
+        }
+    }
+
+ @media screen and (min-width: 768px) {
+     #products-anchor {
+         font-size: 26px;
+         line-height: 1.154;
+     }
+
+     .products-section {
+         padding-top: 122px;
+         padding-bottom: 0;
+
+        &__heading {
+            font-size: 48px;
+            line-height: 1.146;
+        }
+     }
+        
+    .grid {
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+
+        &__card {
+            margin-bottom: 112px;
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+
+        &__item {
+            width: 220px;
+
+            &--icecream {
+                 &::before {
+                     top: -105px;
+                     left: 0;
+                     width: 220px;
+                     height: 226px;
+                     background-image: url(/images/product-1-220x226@1x.webp);
+                 }
+            }
+
+            &--icecoffee {
+                 &::before {
+                     left: 0;
+                     width: 220px;
+                     height: 233px;
+                     background-image: url(/images/product-2-220x233@1x.webp);
+                 }
+            }
+
+            &--milkshakes {
+                 &::before {
+                     top: -105px;
+                     left: 0;
+                     width: 220px;
+                     height: 224px;
+                     background-image: url(/images/product-3-220x224@1x.webp);
+                 }
+            }
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+
+         &__heading {
+             margin-top: 141px;
+
+             &::after {
+                margin-top: 30px;
+             }
+         }
+
+         &__text {
+             padding: 30px 11px 40px 11px;
+             max-height: 141px;
+         }
+
+         &__btn {
+            margin: 30px auto 5px auto;
+         }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #product-anchor {
+        font-size: 30px;
+    }
+
+    .products-section {
+        padding-top: 127px;
+        padding-bottom: 0;
+
+        &__heading {
+            padding-bottom: 260px;
+            font-size: 58px;
+            line-height: 1.138;
+        }
+    }
+
+    .grid {
+        &__card {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        &__item {
+            width: 329px;
+            height: 525px;
+
+            &--icecream {
+                &::before {
+                    top: -220px;
+                    left: -2px;
+                    width: 335px;
+                    height: 335px;
+                    background-image: url(/images/product-1-335x335@1x.webp);
+                }
+            }
+
+            &--icecoffee {
+                &::before {
+                    top: -220px;
+                    left: -2px;
+                    width: 337px;
+                    height: 335px;
+                    background-image: url(/images/product-2-337x335@1x.webp);
+                }
+            }
+        
+            &--milkshakes {
+                &::before {
+                    top: -212px;
+                    left: -2px;
+                    width: 335px;
+                    height: 335px;
+                    background-image: url(/images/product-3-335x335@1x.webp);
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+        
+        &__heading {
+            margin-top: 140px;
+
+            &::after {
+                margin-top: 32px;
+            }
+        }
+
+        &__text {
+            padding: 32px 44px 62px 44px;
+            max-height: 150px;
+            font-size: 16px;
+            line-height: 1.75;
+        }
+            
+        &__btn {
+            margin: 30px auto 5px auto;
+        }
+        
+    }
+}
